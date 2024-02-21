@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Young+Serif&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr;
+  grid-template-rows: 100px 3fr 100px;
+  background-color: hsl(30, 54%, 90%);
+}
+.container {
+  grid-column-start: 2;
+  grid-row-start: 2;
+  display: grid;
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 20px;
+}
+.container p,
+.linecolor,
+.litecolor {
+  color: hsl(30, 10%, 34%);
+  font-size: 16px;
+}
+.darkcolor {
+  font-family: "Outfit", sans-serif;
+  font-weight: 600;
+  color: hsl(14, 45%, 36%);
+}
+.container h3 {
+  color: hsl(14, 45%, 36%);
+}
+.container h2,
+h3 {
+  font-family: "Young Serif", serif;
+  font-weight: 400;
+}
+.container span {
+  color: hsl(24, 5%, 18%);
+  font-weight: 500;
+}
+.main-img > img {
+  width: 600px;
+  height: 300px;
+  border-radius: 15px;
+}
+.main-content {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 20px;
+}
+.preparation-time {
+  display: grid;
+  gap: 0.5rem;
+  padding: 20px;
+  border-radius: 15px;
+  background-color: hsl(30, 18%, 87%);
+}
+.preparation-time h3 {
+  color: hsl(332, 51%, 32%);
+  font-family: "Outfit", sans-serif;
+}
+.preparation-time ul li {
+  padding: 10px;
+  margin-left: 15px;
+  font-family: "Outfit", sans-serif;
+}
+.preparation-time li::marker {
+  color: hsl(332, 51%, 32%);
+}
+.ingredients {
+  display: grid;
+  gap: 0.5rem;
+}
+.instructions {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: "Outfit", sans-serif;
+}
+.ingredients ul li {
+  padding: 10px;
+  margin-left: 15px;
+}
+.instructions ol li {
+  padding: 10px;
+  margin-left: 15px;
+}
+.instructions li::marker {
+  color: hsl(14, 45%, 36%);
+}
+.nutrition {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.nutrition > p {
+  padding: 20px 0 20px 0;
+}
+.nutrition table tr td {
+  padding: 10px;
+  border-bottom: 1px solid rgba(82, 68, 68, 0.4);
+}
+.nutrition table {
+  width: 100%;
+}
+
+@media (max-width: 700px) {
+  body {
+    display: grid;
+    grid-template-columns: 4fr;
+    grid-template-rows: 3fr;
+  }
+  .container {
+    padding: 0;
+  }
+  .container hr {
+    margin: 0 20px 0 20px;
+  }
+  .main-img > img {
+    width: 100%;
+    height: 150px;
+    border-radius: 0;
+  }
+  .main-content,
+  .ingredients,
+  .instructions,
+  .nutrition {
+    padding: 20px;
+  }
+}
